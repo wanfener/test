@@ -17,6 +17,7 @@ public class Controller {
     @GetMapping("/aaa")
     public void jie() {
         System.out.println("收到请求");
+        System.out.println("我是b分支");
         rabbitTemplate.convertAndSend(RabbitmqConfig.EXCHANGE_TOPICS_INFORM,"inform.email","消息");
     }
 }
